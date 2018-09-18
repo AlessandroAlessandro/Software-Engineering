@@ -12,58 +12,11 @@ var fs = require('fs'),
    data = list.entries;
 
 /* Connect to your database */
-//mongoose.Promise = require('alexdatabase');
+
 var connection = mongoose.connect(config.db.uri, { useMongoClient: true });
 /*
  Instantiate a mongoose model for each listing object in the JSON file,
  and then save it to your Mongo database
-*/
-/*
-var listings = require('./listings.json');
-for (var i = 0; i < listings.entries.length; i++) {
-    var temp;
-    if (data[i].coordinates == undefined) {
-        temp = new Listing({
-            code: data[i].code,
-            name: data[i].name,
-        });
-
-    }
-    else {
-       
-        temp = new Listing({
-            coordinates: data[i].coordinates,
-            code: data[i].code,
-            name: data[i].name,
-            
-            coordinates: {
-                //coordinates: listings.coordinates,
-                Latitude: data[i].coordinates.Latitude,
-                Longitude: data[i].coordinates.Longitude,
-            },
-            address: data[i].address
-        });
-        temp.save(function (err) {
-            if (err) throw err;
-        });
-    }
-}
-*/
-/*
-var listings = require('./listings.json');
-for (var i = 0; i < listings.entries.length; i++) {
-    var temp = new Listing({
-        code: listings.entries[i].code,
-        name: listings.entries[i].name,
-        address: listings.entries[i].address,
-        if(list. [i].coordinates == undefined){
-                coordinates: listings.entries[i].coordinates,
-                });
-    });
-    temp.save(function (err) {
-        if (err) throw err;
-    });
-};
 */
 
 
